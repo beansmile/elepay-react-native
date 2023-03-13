@@ -21,6 +21,9 @@ buildscript {
         maven {
             url "https://elestyle.github.io/elepay-android/repository"
         }
+        maven {
+            url ' https://s01.oss.sonatype.org/content/repositories/releases/ '
+        }
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -94,6 +97,7 @@ dependencies {
     api ('jp.elestyle.androidapp:elepay:2.9.0') {
         exclude group: 'androidx.appcompat', module: 'appcompat'
     }
+    api("io.github.goallpay:allpaysdk:5.2.5")
 }
 
 def configureReactNativePom(def pom) {
